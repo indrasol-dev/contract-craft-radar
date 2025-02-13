@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Contracts from "./pages/Contracts";
 import Admin from "./pages/Admin";
+import RfpWriter from "./pages/RfpWriter";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Contracts />} />
           <Route path="/dashboard" element={<Index />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/rfp-writer" element={<RfpWriter />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

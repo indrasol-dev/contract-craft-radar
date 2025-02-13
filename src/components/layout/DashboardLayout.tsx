@@ -24,6 +24,9 @@ export const DashboardLayout = ({ children }: { children: React.ReactNode }) => 
               <Link to="/dashboard" className="text-gray-600 hover:text-primary-600">
                 Dashboard
               </Link>
+              <Link to="/rfp-writer" className="text-gray-600 hover:text-primary-600">
+                RFP Writer
+              </Link>
               <Link to="/admin" className="text-gray-600 hover:text-primary-600">
                 Admin
               </Link>
