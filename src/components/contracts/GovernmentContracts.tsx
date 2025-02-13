@@ -1,5 +1,7 @@
+
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -7,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { DollarSign, Calendar, Building2 } from "lucide-react";
+import { DollarSign, Calendar, Building2, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const contracts = [
@@ -72,7 +74,22 @@ export const GovernmentContracts = () => {
                     {contract.agency}
                   </div>
                 </div>
-                <Badge>{contract.status}</Badge>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-1"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Add RFP generation logic here
+                      console.log("Generate RFP for:", contract.id);
+                    }}
+                  >
+                    <FileText className="w-4 h-4" />
+                    Generate RFP
+                  </Button>
+                  <Badge>{contract.status}</Badge>
+                </div>
               </div>
               
               <div className="mt-4 flex gap-4">
